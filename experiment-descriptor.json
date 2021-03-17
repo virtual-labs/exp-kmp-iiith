@@ -1,0 +1,205 @@
+{
+  "unit-type": "lu",
+  "label": "KMP Algorithm",
+  "basedir": ".",
+  "units": [
+    {
+      "unit-type": "aim"
+    },
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz Instructions",
+      "content-type": "video",
+      "source": "pre-test.md",
+      "target": "pre-test.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.js",
+      "target": "pretest.html"
+    },
+    {
+      "unit-type": "lu",
+      "label": "Naive String Searching",
+      "basedir": "naive-string-searching",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+        {
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Introduction : Why?",
+          "content-type": "video",
+          "source": "introduction-why.md",
+          "target": "introduction-why.html"
+        },
+        
+        {
+          "unit-type": "task",
+          "label": "Naive String Searching Demo",
+          "content-type": "simulation",
+          "source": "simulation/naiveDemo.html",
+          "target": "naiveDemo.html"
+        },
+	
+        
+	{
+         "unit-type": "task",
+         "label": "Naive String Searching Quiz",
+         "content-type": "assesment",
+         "source": "naive-string-searching-quiz.js",
+         "target": "naive-string-searching-quiz.html"
+       }
+      
+      ]
+    },
+   
+        {
+      "unit-type": "lu",
+      "label": "Knuth-Morris-Pratt Algorithm",
+      "basedir": "knuth-morris-pratt-algorithm",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Intro to LPS Array",
+          "content-type": "video",
+          "source": "intro-to-lps-array.md",
+          "target": "intro-to-lps-array.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Concept And Strategy : KMP",
+          "content-type": "video",
+          "source": "concept-and-strategy-kmp.md",
+          "target": "concept-and-strategy-kmp.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "KMP Algorithm Demo",
+          "content-type": "simulation",
+          "source": "simulation/kmpDemo.html",
+          "target": "kmpDemo.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "KMP Algorithm Practice",
+          "content-type": "simulation",
+          "source": "simulation/kmpPractice.html",
+          "target": "kmpPractice.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "KMP Algorithm Exercise",
+          "content-type": "simulation",
+          "source": "simulation/kmpExercise.html",
+          "target": "kmpExercise.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "KMP Algorithm Quiz",
+          "content-type": "assesment",
+          "source": "kmp-algorithm-quiz.js",
+          "target": "kmp-algorithm-quiz.html"
+        }
+      ]
+    },
+
+	        {
+      "unit-type": "lu",
+      "label": "Preprocessing of KMP Algorithm",
+      "basedir": "preprocessing-of-kmp-algorithm",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Concept and Strategy : Preprocessing",
+          "content-type": "video",
+          "source": "concept-and-strategy-preprocessing.md",
+          "target": "concept-and-strategy-preprocessing.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": "Preprocessing Demo",
+          "content-type": "simulation",
+          "source": "simulation/preprocessingDemo.html",
+          "target": "preprocessingDemo.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Analysis of the KMP String Searching Algorithm",
+          "content-type": "video",
+          "source": "analysis-of-the-kmp-string-searching-algorithm.md",
+          "target": "analysis-of-the-kmp-string-searching-algorithm.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Analysis Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.js",
+          "target": "analysis-quiz.html"
+        }
+      ]
+    },
+	
+	
+
+    {
+          "unit-type": "task",
+          "label": "Post Test Quiz Instructions",
+          "content-type": "video",
+          "source": "post-test.md",
+          "target": "post-test.html"
+        },
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.js",
+      "target": "posttest.html"
+    },
+       
+    {
+      "unit-type": "task",
+      "label": "Further Readings/References",
+      "content-type": "text",
+      "source": "further-reading-and-references.md",
+      "target": "further-reading-and-references.html"
+    }
+  ]
+}
