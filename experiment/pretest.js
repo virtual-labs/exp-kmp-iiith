@@ -100,7 +100,7 @@
         },
 
     {
-      question: "2. Which one of the following is not a prefix of the word 'TIKI-TAKA-TIK-TI'?',  ///// Write the question inside double quotes
+      question: "2. Which one of the following is not a prefix of the word 'TIKI-TAKA-TIK-TI'?",  ///// Write the question inside double quotes
       answers: {
         a: "TAKA",                  ///// Write the option 1 inside double quotes
         b: " TIKI ",                  ///// Write the option 2 inside double quotes
