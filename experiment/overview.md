@@ -1,6 +1,3 @@
-### Estimated Time
-
-2.5 hour
 
 ### Prerequisites of the Experiment
 

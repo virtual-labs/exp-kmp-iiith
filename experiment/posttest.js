@@ -123,7 +123,7 @@ correctAnswer: "b"                ///// Write the correct option inside double q
 },
 
 {
-question: "4. Find the LPS array for 'AABAAABAA'?',  ///// Write the question inside double quotes
+question: "4. Find the LPS array for 'AABAAABAA'?",  ///// Write the question inside double quotes
 answers: {
 a: "010122345",                  ///// Write the option 1 inside double quotes
 b: "010000123 ",                  ///// Write the option 2 inside double quotes
