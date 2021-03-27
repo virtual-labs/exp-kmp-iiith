@@ -38,7 +38,7 @@ The brute-force method to find a pattern in a given string text is:
   -  If strInd ever increases beyond the length of the string then return 0 since it means that the pattern doesn't exist in the string.
 
 ### Iteration by Iteration Visualization of Naive String Searching Algorithm 
-<<>>
+  <img src="images/NaiveExample.png">
 
 ### Time Complexity
 
