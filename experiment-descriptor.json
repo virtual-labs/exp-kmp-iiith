@@ -34,8 +34,8 @@
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
-          "source": "introduction-why.md",
-          "target": "introduction-why.html"
+          "source": "concept-and-strategy-naive.md",
+          "target": "concept-and-strategy-naive.html"
         },
         
         {
