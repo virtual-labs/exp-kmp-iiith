@@ -1,3 +1,5 @@
+<iframe src="https://www.youtube.com/embed/StPHqA7-l2M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Introduction
 
    - The preprocessing for the KMP algorithm involves using the pattern string to create an auxiliary array called LPS (of size same as that of the pattern) which will be used to skip character comparisons while matching to save time.

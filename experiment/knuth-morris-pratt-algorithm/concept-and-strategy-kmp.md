@@ -1,3 +1,5 @@
+<iframe src="https://www.youtube.com/embed/AVntfZSptew" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Explanation
 
 Unlike the bruteforce approach where we just shift the pattern by and start comparing again, we must use a value from the LPS Array to decide which character to compare next. The core idea is to avoid comparing the characters which we know will match correctly anyway.

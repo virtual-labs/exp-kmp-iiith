@@ -1,3 +1,5 @@
+<iframe src="https://www.youtube.com/embed/3t3u0EUerLI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Explanation
 
 The brute-force method to find a pattern in a given string text is:

@@ -32,7 +32,7 @@
        
 	{
           "unit-type": "task",
-          "label": "Introduction : Why?",
+          "label": "Concept",
           "content-type": "video",
           "source": "introduction-why.md",
           "target": "introduction-why.html"
@@ -69,14 +69,14 @@
 	
         {
           "unit-type": "task",
-          "label": "Intro to LPS Array",
+          "label": "LPS Array",
           "content-type": "video",
           "source": "intro-to-lps-array.md",
           "target": "intro-to-lps-array.html"
         },
         {
           "unit-type": "task",
-          "label": "Concept And Strategy ",
+          "label": "Concept  ",
           "content-type": "video",
           "source": "concept-and-strategy-kmp.md",
           "target": "concept-and-strategy-kmp.html"
@@ -123,7 +123,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Concept and Strategy ",
+          "label": "Concept  ",
           "content-type": "video",
           "source": "concept-and-strategy-preprocessing.md",
           "target": "concept-and-strategy-preprocessing.html"
