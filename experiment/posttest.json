@@ -1,1 +1,48 @@
-[{"question":"1.What is the overall complexity of the KMP-String-Searching algorithm?","answers":{"a":"O(N×M)O(N \times M)","b":"O(N<sup>2</sup>)O(N^2)","c":"O(N+M)O(N+M) ","d":"None of the above "},"correctAnswer":"c"},{"question":"2. What is the space complexity for the KMP String Searching algorithm?","answers":{"a":"O(M)O(M)","b":"O(N)O(N)","c":"O(N+M)O(N+M)","d":"None of the above"},"correctAnswer":"a"},{"question":"3. What is the LPS array for the pattern: 'ababbabbabbababbabb' ?","answers":{"a":" 001201201001232101","b":"0012012012012345678","c":"012344567891230120","d":" 012344567891230123"},"correctAnswer":"b"},{"question":"4. Find the LPS array for 'AABAAABAA'?","answers":{"a":"010122345","b":"010000123 ","c":"012345678","d":"010010010"},"correctAnswer":"a"},{"question":"5. Using the LPS array from the previous question, which character would you start comparing from if you know that the matching failed at AABAAABAA? ","answers":{"a":"0","b":"1","c":"6 ","d":"3"},"correctAnswer":"d"}]
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the time complexity of the KMP Algorithm?( M = length of pattern , N = length of string in which pattern is searched)",
+            "answers": {
+                "a": "O(M\u00d7N)",
+                "b": "O(M^N)",
+                "c": "O(M+N)",
+                "d": "None of these"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "In the preprocessing of the KMP algorithm a LPS array is created which is of O(M) time complexity. Using this LPS array , we iterate over the whole string to determine if there is a pattern match in the string. So total time complexity = O(M) + O(N) = O(M+N)",
+                "Difficulty": "Advanced"
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "2. Given the pattern to be found, which of the following is the correct LPS array ?<br>Pattern = AABAAC",
+            "answers": {
+                "a": "1 0 1 2 0 0",
+                "b": "0 0 1 0 1 2",
+                "c": "0 1 0 1 2 0",
+                "d": "0 1 0 1 2 0"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "The LPS array of is the Longest Prefix-Suffix Array of the pattern given. For the given pattern the LPS array is"
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Given Input String and Pattern , find the first index of the input string that matches the pattern using the KMP algorithm<br>Input String = \u201cTSATLEADSAT\u201d<br>Pattern = \u201cSAT\u201d",
+            "answers": {
+                "a": "8",
+                "b": "10",
+                "c": "1",
+                "d": "3"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "While reporting the index matched in the KMP algorithm if not specifically asked about the final index , we report the initial index of the string where the pattern is matched. There are two matches in the following string<br>Match 1 - \u201c1-3\u201d<br>Match 2 - \u201c8-10\u201d<br>So the answer is 1 (initial index of the first match\u201d"
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}

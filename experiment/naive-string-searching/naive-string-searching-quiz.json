@@ -1,0 +1,33 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the time complexity of Naive-String-Searching Algorithm? (N = length of string in which pattern is searched , M = length of pattern to be searched) ",
+            "answers": {
+                "a": "O(N*M)",
+                "b": "O(N+M)",
+                "c": "O(N^M)",
+                "d": "None of the Above."
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "In the naive-string search algorithm we search in the original string by selecting the starting index and comparing the substring with the pattern provided. The comparison with the pattern takes O(M) and the starting index is iterated over whole original string, which is O(N) so the final time complexity turns out to be O(N*M)."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. What will be the output of the following code (cpp snippet) ? <br><pre><code>string s = \u201ckmpalgo\u201d;<br> int n = s.size();<br> string s2 = \u201calgo\u201d;<br> int m = s2.size();<br> Int i=0;<br>int flag = 0;<br>while(i<n)<br>{<br>int j = i;<br>int k = 0;<br>int flag1 = 0;<br>while(j<n && k<m)<br>{<br>if(s[j] == s2[k])<br> { j++;k++;}<br>else<br>{ flag1 = 1;break;}<br>}<br>if(flag1==0)<br>{ flag =1;break)<br>i++;<br>}<br>cout << flag << endl;",
+            "answers": {
+                "a": "1",
+                "b": "0",
+                "c": "Runtime error",
+                "d": "Compilation error"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "\u201cThe code runs the naive-search algorithm and searches for the pattern \u201calgo\u201d in the string \u201ckmpalgo\u201d and returns the value of flag 1 if found and 0 if not."
+            },
+            "difficulty": "advanced"
+        }
+    ]
+}

@@ -18,7 +18,7 @@
       "unit-type": "task",
       "label": "Pre Test Quiz",
       "content-type": "assesment",
-      "source": "pretest.js",
+      "source": "pretest.json",
       "target": "pretest.html"
     },
     {
@@ -51,7 +51,7 @@
          "unit-type": "task",
          "label": "  Quiz",
          "content-type": "assesment",
-         "source": "naive-string-searching-quiz.js",
+         "source": "naive-string-searching-quiz.json",
          "target": "naive-string-searching-quiz.html"
        }
       
@@ -106,7 +106,7 @@
           "unit-type": "task",
           "label": " Quiz",
           "content-type": "assesment",
-          "source": "kmp-algorithm-quiz.js",
+          "source": "kmp-algorithm-quiz.json",
           "target": "kmp-algorithm-quiz.html"
         }
       ]
@@ -147,7 +147,7 @@
           "unit-type": "task",
           "label": " Quiz",
           "content-type": "assesment",
-          "source": "analysis-quiz.js",
+          "source": "analysis-quiz.json",
           "target": "analysis-quiz.html"
         }
       ]
@@ -158,7 +158,7 @@
       "unit-type": "task",
       "label": "Post Test Quiz",
       "content-type": "assesment",
-      "source": "posttest.js",
+      "source": "posttest.json",
       "target": "posttest.html"
     },
        
