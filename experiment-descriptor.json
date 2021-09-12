@@ -13,7 +13,14 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-
+    
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.json",
+      "target": "pretest.html"
+    },
     {
       "unit-type": "lu",
       "label": "Naive String Searching",
@@ -37,7 +44,16 @@
           "content-type": "simulation",
           "source": "simulation/naiveDemo.html",
           "target": "naiveDemo.html"
-        }
+        },
+	
+        
+	{
+         "unit-type": "task",
+         "label": "  Quiz",
+         "content-type": "assesment",
+         "source": "naive-string-searching-quiz.json",
+         "target": "naive-string-searching-quiz.html"
+       }
       
       ]
     },
@@ -85,6 +101,13 @@
           "content-type": "simulation",
           "source": "simulation/kmpExercise.html",
           "target": "kmpExercise.html"
+        },
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "kmp-algorithm-quiz.json",
+          "target": "kmp-algorithm-quiz.html"
         }
       ]
     },
@@ -119,8 +142,24 @@
           "content-type": "video",
           "source": "analysis-of-the-kmp-string-searching-algorithm.md",
           "target": "analysis-of-the-kmp-string-searching-algorithm.html"
+        },
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.json",
+          "target": "analysis-quiz.html"
         }
       ]
+    },
+	
+	
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.json",
+      "target": "posttest.html"
     },
        
     {
