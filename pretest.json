@@ -1,0 +1,75 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Which of the following is the best description of a substring?",
+            "answers": {
+                "a": "Any combination of a subset of characters from a string in the same order as the string.",
+                "b": "Contiguous sequence of characters within a string in the same order.",
+                "c": "Any possible combination of the original set of characters present in the string.",
+                "d": "None of these"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "A Subsequence is the subset of characters from a string in the same order as the string.",
+                "b": "A Substring is a contiguous sequence of characters within a string in the same order.",
+                "c": "A Subset is a possible combination of the original set of characters present in the string."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. Which of the following is not a prefix of the string \u201calgorithm\u201d ?",
+            "answers": {
+                "a": "algo",
+                "b": "algorithm",
+                "c": "go",
+                "d": "al"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "It is a substring with initial index 0 and final index as 3.",
+                "b": "It is a substring with initial index 0 and final index as 8 (A complete string is also a prefix of a string with final index  = size of string -1).",
+                "c": "A prefix of string is a substring where the starting index is 0. It is substring with initial index 2 and final index 3.Intial index!=0, so not a prefix string.",
+                "d": "It is substring with initial index 0 and final index 1."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "Which of the following is a suffix of the string \u201cvlabs\u201d ?",
+            "answers": {
+                "a": "vlab",
+                "b": "lab",
+                "c": "labs",
+                "d": "None of these"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "It is a substring with initial index 0 and final index as 3.",
+                "b": "It is a substring with initial index 1 and final index as 3",
+                "c": "It is substring with initial index 1 and final index 4.<br>Final index== 4(n-1) , so it is a suffix of string \u201cvlabs\u201d."
+            },
+            "difficulty": "na"
+        },
+        {
+            "question": "Difficulty: Beginner",
+            "answers": {},
+            "correctAnswer": "d",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4.<br><pre><code>1 def f(n):<br>2     If n == 0 or n == 1: return 1<br>3     return f(n-1) + f(n-2)</code></pre>Time complexity of this program:",
+            "answers": {
+                "a": "O(log n)",
+                "b": "O(n)",
+                "c": "O(n^2)",
+                "d": "O(2^n)"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "d": "The function returns the nth number of the fibonacci sequence. Upon solving the recurrence relation"
+            },
+            "difficulty": "advanced"
+        }
+    ]
+}
