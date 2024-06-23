@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "experiment name": "KMP Algorithm",
+    "problems": [
+        {
+            "problem name": "Problem 1",
+            "description": "Implement the Knuth-Morris-Pratt algorithm to find the first occurrence of a given pattern in a given text.",
+            "inputs": [
+                "ABABDABACDABABCABAB",
+                "ABABCABAB"
+            ],
+            "expected": 10,
+            "inputs description": "Input consists of a text string - inp1 and a pattern string - inp2.",
+            "expected description": "The starting index of the first occurrence of the pattern in the text."
+        }
+    ]
+}
