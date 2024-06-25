@@ -2,6 +2,13 @@
   "unit-type": "lu",
   "label": "KMP Algorithm",
   "basedir": ".",
+  "code-assessment": {
+    "include": true,
+    "languages": [
+      "javascript"
+    ],
+    "position": 5
+  },
   "units": [
     {
       "unit-type": "aim"
