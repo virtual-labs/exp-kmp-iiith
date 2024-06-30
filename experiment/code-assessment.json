@@ -11,7 +11,8 @@
             ],
             "expected": [0, 9, 12],
             "inputs description": "Input consists of a text string - inp1 and a pattern string - inp2.",
-            "expected description": "An array of starting indices where the pattern occurs in the text."
+            "expected description": "An array of starting indices where the pattern occurs in the text.",
+            "difficulty": "beginner"
         },
         {
             "problem name": "Pattern Match with Wildcards Using KMP Algorithm",
@@ -22,7 +23,8 @@
             ],
             "expected": 0,
             "inputs description": "Input consists of a text string - inp1 and a pattern string with wildcard characters - inp2.",
-            "expected description": "The starting index of the first occurrence of the pattern with wildcards in the text."
+            "expected description": "The starting index of the first occurrence of the pattern with wildcards in the text.",
+            "difficulty": "intermediate"
         }
 
     ]
