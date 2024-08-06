@@ -1,0 +1,31 @@
+{
+    "version": 1,
+    "experiment name": "KMP Algorithm",
+    "problems": [
+        {
+            "problem name": "Find All Occurrences Using KMP Algorithm",
+            "description": "Implement the Knuth-Morris-Pratt algorithm to find all occurrences of a given pattern in a given text.",
+            "inputs": [
+                "AABAACAADAABAABA",
+                "AABA"
+            ],
+            "expected": [0, 9, 12],
+            "inputs description": "Input consists of a text string - inp1 and a pattern string - inp2.",
+            "expected description": "An array of starting indices where the pattern occurs in the text.",
+            "difficulty": "beginner"
+        },
+        {
+            "problem name": "Pattern Match with Wildcards Using KMP Algorithm",
+            "description": "Implement the Knuth-Morris-Pratt algorithm to find the first occurrence of a given pattern with wildcard characters in a given text. The wildcard character '?' can match any single character.",
+            "inputs": [
+                "ababcabcabababd",
+                "a?ab"
+            ],
+            "expected": 0,
+            "inputs description": "Input consists of a text string - inp1 and a pattern string with wildcard characters - inp2.",
+            "expected description": "The starting index of the first occurrence of the pattern with wildcards in the text.",
+            "difficulty": "intermediate"
+        }
+
+    ]
+}
