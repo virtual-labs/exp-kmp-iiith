@@ -1,33 +1,90 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the time complexity of the prepropressing function for a pattern of length M ?",
-            "answers": {
-                "a": "O(M^2)",
-                "b": "O(M)",
-                "c": "O(sqrt(M))",
-                "d": "O(M^3)"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "In the preprocessing function for a pattern of length M we need to iterate over the whole string once to calculate the LPS array."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. What is the longest-prefix-suffix for: 'ANIDAPOPOANIDA'?",
-            "answers": {
-                "a": "6",
-                "b": "2",
-                "c": "5",
-                "d": "3"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "Longest Prefix-Suffix for the string \u201cANIDAPOPANIDA\u201d  is 5 (the string itself).As for the string s"
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the preprocessing function for a pattern of length M?",
+      "answers": {
+        "a": "O(M^2)",
+        "b": "O(M)",
+        "c": "O(sqrt(M))",
+        "d": "O(M^3)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This would suggest nested loops over the pattern, but the KMP preprocessing uses a single pass with careful pointer manipulation.",
+        "b": "Correct. In the preprocessing function for a pattern of length M, we need to iterate over the entire pattern once to calculate the LPS array, resulting in O(M) time complexity.",
+        "c": "Incorrect. Square root complexity is not achievable here since we must examine every character in the pattern at least once.",
+        "d": "Incorrect. This cubic complexity would be highly inefficient and is not the case for KMP preprocessing."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What is the longest-prefix-suffix length for: 'ANIDAPOPOANIDA'?",
+      "answers": {
+        "a": "6",
+        "b": "2",
+        "c": "5",
+        "d": "3"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. While 'ANIDAP' (6 characters) appears in the string, it is not both a proper prefix and suffix.",
+        "b": "Incorrect. The substring 'AN' (2 characters) does appear as both prefix and suffix, but it is not the longest.",
+        "c": "Correct. The longest proper prefix which is also a suffix for 'ANIDAPOPOANIDA' is 'ANIDA' with length 5. The prefix 'ANIDA' matches the suffix 'ANIDA'.",
+        "d": "Incorrect. 'ANI' (3 characters) appears as both prefix and suffix but is not the longest such substring."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What is the space complexity of the LPS (Longest Prefix Suffix) array?",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(M)",
+        "c": "O(M^2)",
+        "d": "O(log M)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The LPS array needs to store a value for each position in the pattern, not a constant amount of space.",
+        "b": "Correct. The LPS array requires O(M) space where M is the length of the pattern, as we need to store one integer value for each character position in the pattern.",
+        "c": "Incorrect. This would suggest a two-dimensional structure, but the LPS array is a simple one-dimensional array.",
+        "d": "Incorrect. Logarithmic space would only be sufficient for storing indices or counters, not an array of length M."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. During LPS array construction, what happens when we find a mismatch?",
+      "answers": {
+        "a": "We restart from the beginning of the pattern",
+        "b": "We use the previously computed LPS values to avoid recomputation",
+        "c": "We skip the current character and move to the next",
+        "d": "We terminate the algorithm"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Restarting from the beginning would make the algorithm inefficient with O(M^2) complexity.",
+        "b": "Correct. When a mismatch occurs during LPS array construction, we use the previously computed LPS values to determine the next position to compare, avoiding redundant comparisons and maintaining O(M) complexity.",
+        "c": "Incorrect. Simply skipping characters would not correctly compute the longest prefix-suffix values.",
+        "d": "Incorrect. A mismatch does not terminate the algorithm; the LPS array must be computed for all positions."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What does LPS[0] always equal in the LPS array?",
+      "answers": {
+        "a": "1",
+        "b": "0",
+        "c": "The length of the pattern",
+        "d": "It depends on the first character"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The first position cannot have a proper prefix that is also a suffix, as a proper prefix/suffix must be shorter than the string itself.",
+        "b": "Correct. LPS[0] is always 0 because there is no proper prefix (or suffix) for a single character. A proper prefix/suffix must be shorter than the string, and a single character has no such substring.",
+        "c": "Incorrect. The entire pattern cannot be a proper prefix or suffix of itself.",
+        "d": "Incorrect. Regardless of what the first character is, LPS[0] is always 0 by definition."
+      },
+      "difficulty": "beginner"
+    }
+  ]
 }

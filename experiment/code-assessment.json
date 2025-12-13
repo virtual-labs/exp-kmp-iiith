@@ -4,7 +4,7 @@
     "problems": [
         {
             "problem name": "Find All Occurrences Using KMP Algorithm",
-            "description": "Implement the Knuth-Morris-Pratt algorithm to find all occurrences of a given pattern in a given text.",
+            "description": "Implement the Knuth-Morris-Pratt algorithm to find all occurrences of a given pattern in a given text. The KMP algorithm uses a preprocessing phase to build a failure function (LPS array) that allows efficient pattern matching by avoiding unnecessary comparisons. For each occurrence found, record the starting index in the text where the pattern begins. Example: Text 'AABAACAADAABAABA' with pattern 'AABA' should return [0, 9, 12] as the pattern occurs at these positions. Only JavaScript is allowed.",
             "inputs": [
                 "AABAACAADAABAABA",
                 "AABA"
@@ -16,9 +16,9 @@
         },
         {
             "problem name": "Pattern Match with Wildcards Using KMP Algorithm",
-            "description": "Implement the Knuth-Morris-Pratt algorithm to find the first occurrence of a given pattern with wildcard characters in a given text. The wildcard character '?' can match any single character.",
+            "description": "Implement a modified Knuth-Morris-Pratt algorithm to find the first occurrence of a pattern containing wildcard characters in a given text. The wildcard character '?' can match any single character, requiring adjustments to the standard KMP preprocessing and matching logic to handle these special characters. Build the failure function considering wildcards, then search through the text treating '?' as a match for any character. Example: Text 'ababcabcabababd' with pattern 'a?ab' should return 0 as the first match starts at index 0 (matching 'abab'). Only JavaScript is allowed.",
             "inputs": [
-                "ababcabcabababd",
+                "ababcabcabcababd",
                 "a?ab"
             ],
             "expected": 0,
