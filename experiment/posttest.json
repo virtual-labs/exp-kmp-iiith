@@ -1,48 +1,90 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the time complexity of the KMP Algorithm?( M = length of pattern , N = length of string in which pattern is searched)",
-            "answers": {
-                "a": "O(M\u00d7N)",
-                "b": "O(M^N)",
-                "c": "O(M+N)",
-                "d": "None of these"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "In the preprocessing of the KMP algorithm a LPS array is created which is of O(M) time complexity. Using this LPS array , we iterate over the whole string to determine if there is a pattern match in the string. So total time complexity = O(M) + O(N) = O(M+N)",
-                "Difficulty": "Advanced"
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "2. Given the pattern to be found, which of the following is the correct LPS array ?<br>Pattern = AABAAC",
-            "answers": {
-                "a": "1 0 1 2 0 0",
-                "b": "0 0 1 0 1 2",
-                "c": "0 1 0 1 2 0",
-                "d": "0 1 0 1 2 0"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "The LPS array of is the Longest Prefix-Suffix Array of the pattern given. For the given pattern the LPS array is"
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Given Input String and Pattern , find the first index of the input string that matches the pattern using the KMP algorithm<br>Input String = \u201cTSATLEADSAT\u201d<br>Pattern = \u201cSAT\u201d",
-            "answers": {
-                "a": "8",
-                "b": "10",
-                "c": "1",
-                "d": "3"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "While reporting the index matched in the KMP algorithm if not specifically asked about the final index , we report the initial index of the string where the pattern is matched. There are two matches in the following string<br>Match 1 - \u201c1-3\u201d<br>Match 2 - \u201c8-10\u201d<br>So the answer is 1 (initial index of the first match\u201d"
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the KMP Algorithm? (M = length of pattern, N = length of string in which pattern is searched)",
+      "answers": {
+        "a": "O(M×N)",
+        "b": "O(M^N)",
+        "c": "O(M+N)",
+        "d": "None of these"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is the time complexity of the naive string matching algorithm where we compare the pattern at each position of the text, resulting in a nested loop structure.",
+        "b": "Incorrect. This exponential time complexity is far worse than what KMP achieves. KMP is designed to be efficient with linear time complexity.",
+        "c": "Correct. In the preprocessing phase of the KMP algorithm, an LPS array is created which takes O(M) time. Then we iterate over the entire string to find pattern matches in O(N) time. Total time complexity = O(M) + O(N) = O(M+N).",
+        "d": "Incorrect. Option c correctly describes the time complexity of the KMP algorithm."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "2. Given the pattern to be found, which of the following is the correct LPS array?<br>Pattern = AABAAC",
+      "answers": {
+        "a": "1 0 1 2 0 0",
+        "b": "0 0 1 0 1 2",
+        "c": "0 1 0 1 2 0",
+        "d": "0 1 0 2 2 0"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The first element of the LPS array should be 0, not 1. At index 0, there is no proper prefix that is also a suffix.",
+        "b": "Incorrect. This array doesn't correctly reflect the prefix-suffix patterns. For example, at index 1 (second A), the LPS value should be 1, not 0.",
+        "c": "Correct. The LPS (Longest Proper Prefix which is also Suffix) array for pattern AABAAC is [0,1,0,1,2,0]. At each position: A(0), AA(1), AAB(0), AABA(1), AABAA(2), AABAAC(0).",
+        "d": "Incorrect. At index 3, the LPS value should be 1, not 2. The longest proper prefix that is also a suffix for 'AABA' is 'A' with length 1."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Given Input String and Pattern, find the first index of the input string that matches the pattern using the KMP algorithm.<br>Input String = \"TSATLEADSAT\"<br>Pattern = \"SAT\"",
+      "answers": {
+        "a": "8",
+        "b": "10",
+        "c": "1",
+        "d": "3"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is the starting index of the second match. The question asks for the first index where the pattern matches.",
+        "b": "Incorrect. This is the ending index of the second match (8-10), not the first match's starting index.",
+        "c": "Correct. When reporting the index matched in the KMP algorithm, unless specifically asked for the final index, we report the initial index of the first match. Pattern 'SAT' matches at positions 1-3 and 8-10. The first match starts at index 1.",
+        "d": "Incorrect. This is the ending index of the first match (1-3), not the starting index."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What is the main advantage of the KMP algorithm over the naive string matching algorithm?",
+      "answers": {
+        "a": "It uses less memory",
+        "b": "It never re-examines text characters that have already been matched",
+        "c": "It works only with ASCII characters",
+        "d": "It requires the pattern to be sorted"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. KMP actually uses extra memory (O(M) for the LPS array) compared to the naive algorithm which uses O(1) space.",
+        "b": "Correct. The main advantage of KMP is that it avoids unnecessary re-examination of text characters. When a mismatch occurs, it uses the LPS array to determine the next position to compare, ensuring the text pointer never moves backward.",
+        "c": "Incorrect. KMP works with any character set, not just ASCII. It is a general pattern matching algorithm.",
+        "d": "Incorrect. KMP does not require the pattern to be sorted. It works with any pattern string as-is."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. In the LPS array construction, what does LPS[i] represent?",
+      "answers": {
+        "a": "The total number of characters in the pattern up to index i",
+        "b": "The length of the longest proper prefix which is also a suffix for the substring pattern[0...i]",
+        "c": "The number of times character at index i appears in the pattern",
+        "d": "The position where the pattern matching should restart after a mismatch"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. LPS[i] does not count characters; it represents the length of a specific prefix-suffix pattern, not the substring length.",
+        "b": "Correct. LPS[i] stores the length of the longest proper prefix of the substring pattern[0...i] that is also a suffix of that substring. A 'proper' prefix/suffix means it cannot be the entire string itself.",
+        "c": "Incorrect. LPS does not count character occurrences. It measures the length of matching prefix-suffix patterns.",
+        "d": "Incorrect. While LPS values help determine where to continue matching after a mismatch, LPS[i] specifically represents the length of the longest proper prefix-suffix, not a restart position."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }
