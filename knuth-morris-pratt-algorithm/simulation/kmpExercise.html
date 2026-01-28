@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>KMP Demo</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+      <link rel="stylesheet" href="css/demoUI.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+  </head>
+  <body onload="handlers();">
+    <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li>You have been given a <b>pattern</b> and
+          a <b>text</b> string on which KMP algorithm is being
+          implemented. </li>
+          <li>You have to enter the amount by which the pattern
+          has to shift right after a particular mismatch.</li>
+          <li>The LPS Array for the pattern for assistance is
+          provided.</li>
+          <li>Click on <b>Next</b> after submitting an answer to
+          go to the next problem.</li>
+          <li>Hint : <i>patInd-LPS[patInd-1]</i></li>
+        </ul> 
+      </div>
+    </div>
+    
+    <div id="wrapper">
+      <div class="demoPane">
+        <table id="searchString"><tr id="searchStringRow"></tr></table>
+        <table id="patternString"><tr id="patternStringRow"></tr></table>
+      </div>
+      
+      <div id="comment-wrapper">
+         <table id="tableLpsArray">
+           <caption><b>LPS Table for Pattern</b></caption>
+           <tr id="letters">
+           </tr>
+           <tr id="values">
+           </tr>
+         </table>
+         
+         <div class="comment-box">
+           <b>Observations</b><br>
+           <p id="comment"></p>
+         </div>
+         
+      </div>
+      <div class="allInput">
+        <input type="hidden" class="text-box" id="stringInput" value="AABAABAACD">
+        <input type="hidden" class="text-box" id="patternInput" value="AABAAC">
+        <input type="text" class="text-box" id="answer" value="" placeholder="Enter answer">
+        <input type="submit" class="button-input" id="Submit" value="Submit">
+        <input type="submit" class="button-input" id="Next" value="Next">            
+      </div>
+      
+    </div>
+      <script
+          src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+      <script src="js/demoUI.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+      <script src="js/kmpExerciseJS.js"></script>
+      <script>
+        function handlers(){
+          init();
+          nextState();
+          document.getElementById("Next").onclick = function() { nextState();};
+          document.getElementById("Submit").onclick = function() { checkAnswer(); };
+        }
+      </script>
+<script src="../../assets/js/instruction-box.js"></script>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

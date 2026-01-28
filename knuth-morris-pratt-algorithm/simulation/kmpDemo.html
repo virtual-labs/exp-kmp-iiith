@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>KMP Demo</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+      <link rel="stylesheet" href="css/demoUI.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+  </head>
+  <body onload="handlers();">
+    <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li>Click on the <b>Setup</b> button to start the
+            demo.</li>
+          <li>Click on the <b>Next</b> button to move the demo one
+          match at a time</li>
+          <li>The LPS Array for the pattern has been given in
+          the bottom left for reference</li>
+          <li>Feel free to play around to understand the concept
+          to its full depth.</li>
+        </ul> 
+      </div>
+    </div>
+    
+    <div id="wrapper">
+       <div class="demoPane">
+         <table id="searchString"><tr id="searchStringRow"></tr></table>
+         <table id="patternString"><tr id="patternStringRow"></tr></table>
+       </div>
+       
+       <div id="comment-wrapper">
+          <table id="tableLpsArray">
+            <caption><b>LPS Table for Pattern</b></caption>
+            <tr id="letters">
+            </tr>
+            <tr id="values">
+            </tr>
+          </table>
+          
+          <div class="comment-box">
+            <b>Observations</b><br>
+            <p id="comment"></p>
+          </div>
+          
+       </div>
+       <div class="allInput">
+         <label>String to search in :</label>
+         <input type="text" class="text-box" id="stringInput" value="AABAABAACD">
+         <input type="submit" class="button-input" value="Setup" id="Setup"><br>
+         <label>Pattern to Search for :</label>
+         <input type="text" class="text-box" id="patternInput" value="AABAAC">
+         <input type="submit" class="button-input" value="Next" id="Next">
+       </div>
+       
+    </div>
+      <script
+          src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+          crossorigin="anonymous"></script>
+      <script src="js/demoUI.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+      <script src="js/kmpDemoJS.js"></script>
+      <script>
+          function handlers() {
+             document.getElementById("Next").onclick = function() { nextKMPStep();};
+             document.getElementById("Setup").onclick = function() { search(); };
+             $("input[id='stringInput']").attr("disabled", true);
+             $("input[id='patternInput']").attr("disabled", true);
+             $("input[id='Next']").attr("disabled", true);
+          }     
+      </script>
+<script src="../../assets/js/instruction-box.js"></script>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

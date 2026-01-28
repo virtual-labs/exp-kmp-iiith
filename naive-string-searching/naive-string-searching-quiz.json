@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of Naive-String-Searching Algorithm? (N = length of string in which pattern is searched, M = length of pattern to be searched)",
+      "answers": {
+        "a": "O(N*M)",
+        "b": "O(N+M)",
+        "c": "O(N^M)",
+        "d": "None of the Above."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In the naive-string search algorithm, we search in the original string by selecting each starting index and comparing the substring with the pattern. The comparison with the pattern takes O(M) and the starting index is iterated over the whole original string which is O(N), so the final time complexity is O(N*M).",
+        "b": "Incorrect. This is the time complexity of efficient algorithms like KMP, not the naive algorithm. The naive approach has nested loops leading to multiplicative complexity.",
+        "c": "Incorrect. This exponential complexity would be extremely inefficient and is not the case for naive string searching.",
+        "d": "Incorrect. Option a correctly describes the time complexity of the naive string searching algorithm."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What will be the output of the following code (cpp snippet)?<br><pre><code>string s = \"kmpalgo\";<br>int n = s.size();<br>string s2 = \"algo\";<br>int m = s2.size();<br>int i=0;<br>int flag = 0;<br>while(i<n)<br>{<br>  int j = i;<br>  int k = 0;<br>  int flag1 = 0;<br>  while(j<n && k<m)<br>  {<br>    if(s[j] == s2[k])<br>    { j++; k++; }<br>    else<br>    { flag1 = 1; break; }<br>  }<br>  if(flag1==0)<br>  { flag =1; break; }<br>  i++;<br>}<br>cout << flag << endl;</code></pre>",
+      "answers": {
+        "a": "1",
+        "b": "0",
+        "c": "Runtime error",
+        "d": "Compilation error"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The code implements a naive-search algorithm to search for the pattern 'algo' in the string 'kmpalgo'. The pattern is found at index 3, so flag is set to 1 and the output is 1.",
+        "b": "Incorrect. The pattern 'algo' exists in 'kmpalgo' (at the end), so the flag will be set to 1, not 0.",
+        "c": "Incorrect. The code has no runtime errors. All array accesses are within bounds and the logic is sound.",
+        "d": "Incorrect. Despite the capitalization error (Int instead of int), assuming it's corrected or the question has a typo, the logic is correct and would compile."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "3. What is the best-case time complexity of the naive string matching algorithm?",
+      "answers": {
+        "a": "O(N)",
+        "b": "O(M)",
+        "c": "O(N*M)",
+        "d": "O(1)"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In the best case, the first character of the pattern doesn't match any character in the text, so we only perform N comparisons (one at each position), resulting in O(N) complexity.",
+        "b": "Incorrect. The algorithm must check positions in the text (length N), not just the pattern (length M).",
+        "c": "Incorrect. This is the worst-case complexity, not the best case. The best case occurs when mismatches happen early.",
+        "d": "Incorrect. The algorithm must at least scan through the text once, so constant time is not possible."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What is the worst-case scenario for the naive string matching algorithm?",
+      "answers": {
+        "a": "When the pattern and text have completely different characters",
+        "b": "When the pattern matches at the first position",
+        "c": "When the text and pattern consist of the same repeating character",
+        "d": "When the pattern is longer than the text"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is actually the best case, as mismatches occur immediately at each position requiring minimal comparisons.",
+        "b": "Incorrect. Finding a match early would be a good scenario, not the worst case.",
+        "c": "Correct. The worst case occurs when the text and pattern consist of the same repeating character (e.g., text='aaaa...' and pattern='aaa...'). This forces the algorithm to perform maximum comparisons at each position before finding a mismatch or match, resulting in O(N*M) comparisons.",
+        "d": "Incorrect. If the pattern is longer than the text, the algorithm would terminate quickly as no match is possible."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Why is the naive algorithm called 'naive'?",
+      "answers": {
+        "a": "It was invented by someone named Naive",
+        "b": "It doesn't use any preprocessing or optimization techniques",
+        "c": "It only works with simple patterns",
+        "d": "It requires the least amount of memory"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The term 'naive' refers to the simplicity of the approach, not a person's name.",
+        "b": "Correct. The algorithm is called 'naive' because it uses a straightforward, brute-force approach without any preprocessing or optimization. It simply checks every possible position in the text without learning from previous comparisons.",
+        "c": "Incorrect. The naive algorithm works with any pattern; its limitation is efficiency, not functionality.",
+        "d": "Incorrect. While it does use minimal memory (O(1) extra space), this is not why it's called 'naive'. The term refers to its simple, unoptimized approach."
+      },
+      "difficulty": "beginner"
+    }
+  ]
+}
