@@ -1,33 +1,39 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the time complexity of the prepropressing function for a pattern of length M ?",
-            "answers": {
-                "a": "O(M^2)",
-                "b": "O(M)",
-                "c": "O(sqrt(M))",
-                "d": "O(M^3)"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "In the preprocessing function for a pattern of length M we need to iterate over the whole string once to calculate the LPS array."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. What is the longest-prefix-suffix for: 'ANIDAPOPOANIDA'?",
-            "answers": {
-                "a": "6",
-                "b": "2",
-                "c": "5",
-                "d": "3"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "Longest Prefix-Suffix for the string \u201cANIDAPOPANIDA\u201d  is 5 (the string itself).As for the string s"
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the preprocessing function for a pattern of length M?",
+      "answers": {
+        "a": "O(M^2)",
+        "b": "O(M)",
+        "c": "O(sqrt(M))",
+        "d": "O(M^3)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The preprocessing function does not require quadratic time.",
+        "b": "Correct. The preprocessing function for KMP computes the LPS array in O(M) time by iterating through the pattern once.",
+        "c": "Incorrect. O(sqrt(M)) is not the correct complexity.",
+        "d": "Incorrect. O(M^3) is much higher than required."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What is the longest prefix-suffix for: 'ANIDAPOPOANIDA'?",
+      "answers": {
+        "a": "6",
+        "b": "2",
+        "c": "5",
+        "d": "3"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 6 is not the correct length of the longest prefix-suffix.",
+        "b": "Incorrect. 2 is not the correct length of the longest prefix-suffix.",
+        "c": "Correct. The longest prefix-suffix for 'ANIDAPOPOANIDA' is 5, as the prefix and suffix 'ANIDA' match.",
+        "d": "Incorrect. 3 is not the correct length of the longest prefix-suffix."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
 }

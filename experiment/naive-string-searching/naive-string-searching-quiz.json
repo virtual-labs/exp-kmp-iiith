@@ -1,33 +1,39 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the time complexity of Naive-String-Searching Algorithm? (N = length of string in which pattern is searched , M = length of pattern to be searched) ",
-            "answers": {
-                "a": "O(N*M)",
-                "b": "O(N+M)",
-                "c": "O(N^M)",
-                "d": "None of the Above."
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "In the naive-string search algorithm we search in the original string by selecting the starting index and comparing the substring with the pattern provided. The comparison with the pattern takes O(M) and the starting index is iterated over whole original string, which is O(N) so the final time complexity turns out to be O(N*M)."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. What will be the output of the following code (cpp snippet) ? <br><pre><code>string s = \u201ckmpalgo\u201d;<br> int n = s.size();<br> string s2 = \u201calgo\u201d;<br> int m = s2.size();<br> Int i=0;<br>int flag = 0;<br>while(i<n)<br>{<br>int j = i;<br>int k = 0;<br>int flag1 = 0;<br>while(j<n && k<m)<br>{<br>if(s[j] == s2[k])<br> { j++;k++;}<br>else<br>{ flag1 = 1;break;}<br>}<br>if(flag1==0)<br>{ flag =1;break)<br>i++;<br>}<br>cout << flag << endl;",
-            "answers": {
-                "a": "1",
-                "b": "0",
-                "c": "Runtime error",
-                "d": "Compilation error"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "\u201cThe code runs the naive-search algorithm and searches for the pattern \u201calgo\u201d in the string \u201ckmpalgo\u201d and returns the value of flag 1 if found and 0 if not."
-            },
-            "difficulty": "advanced"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the Naive String Searching Algorithm? (N = length of the string, M = length of the pattern)",
+      "answers": {
+        "a": "O(N*M)",
+        "b": "O(N+M)",
+        "c": "O(N^M)",
+        "d": "None of the above."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The naive string search checks each possible starting index in the string (O(N)), and for each, compares up to M characters (O(M)), resulting in O(N*M) time complexity.",
+        "b": "Incorrect. O(N+M) is the complexity of more advanced algorithms like KMP.",
+        "c": "Incorrect. O(N^M) is not the correct complexity for this algorithm.",
+        "d": "Incorrect. Option a is correct."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What will be the output of the following code (C++ snippet)? <br><pre><code>string s = 'kmpalgo';\nint n = s.size();\nstring s2 = 'algo';\nint m = s2.size();\nint i = 0;\nint flag = 0;\nwhile(i < n) {\n  int j = i;\n  int k = 0;\n  int flag1 = 0;\n  while(j < n && k < m) {\n    if(s[j] == s2[k]) { j++; k++; }\n    else { flag1 = 1; break; }\n  }\n  if(flag1 == 0) { flag = 1; break; }\n  i++;\n}\ncout << flag << endl;</code></pre>",
+      "answers": {
+        "a": "1",
+        "b": "0",
+        "c": "Runtime error",
+        "d": "Compilation error"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The code implements the naive search algorithm and returns 1 if the pattern 'algo' is found in 'kmpalgo', which it is.",
+        "b": "Incorrect. The pattern is present, so the output is not 0.",
+        "c": "Incorrect. The code does not cause a runtime error.",
+        "d": "Incorrect. The code does not have a compilation error."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }

@@ -1,48 +1,56 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the time complexity of the KMP Algorithm?( M = length of pattern , N = length of string in which pattern is searched)",
-            "answers": {
-                "a": "O(M\u00d7N)",
-                "b": "O(M^N)",
-                "c": "O(M+N)",
-                "d": "None of these"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "In the preprocessing of the KMP algorithm a LPS array is created which is of O(M) time complexity. Using this LPS array , we iterate over the whole string to determine if there is a pattern match in the string. So total time complexity = O(M) + O(N) = O(M+N)",
-                "Difficulty": "Advanced"
-            },
-            "difficulty": "advanced"
-        },
-        {
-            "question": "2. Given the pattern to be found, which of the following is the correct LPS array ?<br>Pattern = AABAAC",
-            "answers": {
-                "a": "1 0 1 2 0 0",
-                "b": "0 0 1 0 1 2",
-                "c": "0 1 0 1 2 0",
-                "d": "0 1 0 1 2 0"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "The LPS array of is the Longest Prefix-Suffix Array of the pattern given. For the given pattern the LPS array is"
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Given Input String and Pattern , find the first index of the input string that matches the pattern using the KMP algorithm<br>Input String = \u201cTSATLEADSAT\u201d<br>Pattern = \u201cSAT\u201d",
-            "answers": {
-                "a": "8",
-                "b": "10",
-                "c": "1",
-                "d": "3"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "While reporting the index matched in the KMP algorithm if not specifically asked about the final index , we report the initial index of the string where the pattern is matched. There are two matches in the following string<br>Match 1 - \u201c1-3\u201d<br>Match 2 - \u201c8-10\u201d<br>So the answer is 1 (initial index of the first match\u201d"
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the KMP algorithm? (M = length of pattern, N = length of string in which the pattern is searched)",
+      "answers": {
+        "a": "O(M×N)",
+        "b": "O(M^N)",
+        "c": "O(M+N)",
+        "d": "None of these"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. O(M×N) is the time complexity of the naive string search algorithm, not KMP.",
+        "b": "Incorrect. O(M^N) is not the correct complexity for KMP.",
+        "c": "Correct. KMP preprocesses the pattern in O(M) time and searches the string in O(N) time, for a total of O(M+N).",
+        "d": "Incorrect. Option c is correct."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "2. Given the pattern to be found, which of the following is the correct LPS array? Pattern = AABAAC",
+      "answers": {
+        "a": "1 0 1 2 0 0",
+        "b": "0 0 1 0 1 2",
+        "c": "0 1 0 1 2 0",
+        "d": "0 1 0 1 2 0"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is not the correct LPS array for the given pattern.",
+        "b": "Incorrect. This is not the correct LPS array for the given pattern.",
+        "c": "Correct. The LPS (Longest Prefix-Suffix) array for 'AABAAC' is [0, 1, 0, 1, 2, 0].",
+        "d": "Incorrect. This is a duplicate of option c, but only one correct answer is needed."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Given the input string and pattern, find the first index of the input string that matches the pattern using the KMP algorithm. Input String = 'TSATLEADSAT', Pattern = 'SAT'",
+      "answers": {
+        "a": "8",
+        "b": "10",
+        "c": "1",
+        "d": "3"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 8 is the starting index of the second match, not the first.",
+        "b": "Incorrect. 10 is the ending index of the second match, not the starting index.",
+        "c": "Correct. The first occurrence of 'SAT' in 'TSATLEADSAT' starts at index 1 (assuming 1-based indexing).",
+        "d": "Incorrect. 3 is not the correct starting index for the first match."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
 }
