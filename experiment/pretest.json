@@ -11,10 +11,10 @@
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "This describes a subsequence, not a substring.",
-        "b": "A substring is a contiguous sequence of characters within a string.",
-        "c": "This describes a subset, not a substring.",
-        "d": "Option b is correct."
+        "a": "Incorrect. This describes a subsequence, not a substring.",
+        "b": "Correct. A substring is a contiguous sequence of characters within a string.",
+        "c": "Incorrect. This describes a subset, not a substring.",
+        "d": "Incorrect. Option b is correct."
       },
       "difficulty": "beginner"
     },
@@ -28,10 +28,10 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "'algo' starts from the first character, so it is a prefix.",
-        "b": "The whole string is always a prefix of itself.",
-        "c": "'go' does not start from the first character, so it is not a prefix.",
-        "d": "'al' starts from the first character, so it is a prefix."
+        "a": "Incorrect. 'algo' starts from the first character, so it is a prefix.",
+        "b": "Incorrect. The whole string is always a prefix of itself.",
+        "c": "Correct. 'go' does not start from the first character, so it is not a prefix.",
+        "d": "Incorrect. 'al' starts from the first character, so it is a prefix."
       },
       "difficulty": "beginner"
     },
@@ -45,10 +45,10 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "'vlab' is a prefix, not a suffix.",
-        "b": "'lab' is a substring, but not a suffix.",
-        "c": "'labs' ends at the last character, so it is a suffix.",
-        "d": "Option c is correct."
+        "a": "Incorrect. 'vlab' is a prefix, not a suffix.",
+        "b": "Incorrect. 'lab' is a substring, but not a suffix.",
+        "c": "Correct. 'labs' ends at the last character, so it is a suffix.",
+        "d": "Incorrect. Option c is correct."
       },
       "difficulty": "beginner"
     },
@@ -62,10 +62,10 @@
       },
       "correctAnswer": "d",
       "explanations": {
-        "a": "This is not logarithmic recursion.",
-        "b": "This would be true for the dynamic programming version.",
-        "c": "This is not quadratic recursion.",
-        "d": "This is the classic recursive Fibonacci, which is exponential: O(2^n)."
+        "a": "Incorrect. O(log n) is not the time complexity of this recursive function.",
+        "b": "Incorrect. This would be true for the dynamic programming version.",
+        "c": "Incorrect. This is not quadratic recursion.",
+        "d": "Correct. This is the classic recursive Fibonacci, which is exponential: O(2^n)."
       },
       "difficulty": "advanced"
     }
