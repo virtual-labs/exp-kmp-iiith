@@ -36,7 +36,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "3. What will be the output of the following code (C++ snippet)? <br><pre><code>string s = 'kmpalgo';\nint n = s.size();\nstring s2 = 'algo';\nint m = s2.size();\nint i = 0;\nint flag = 0;\nwhile(i < n) {\n  int j = i;\n  int k = 0;\n  int flag1 = 0;\n  while(j < n && k < m) {\n    if(s[j] == s2[k]) { j++; k++; }\n    else { flag1 = 1; break; }\n  }\n  if(flag1 == 0) { flag = 1; break; }\n  i++;\n}\ncout << flag << endl;</code></pre>",
+      "question": "3. What will be the output of the following code (C++ snippet)? <br><pre><code>\nstring s = 'kmpalgo';\nint n = s.size();\nstring s2 = 'algo';\nint m = s2.size();\nint i = 0;\nint flag = 0;\nwhile(i < n) {\n  int j = i;\n  int k = 0;\n  int flag1 = 0;\n  while(j < n && k < m) {\n    if(s[j] == s2[k]) { j++; k++; }\n    else { flag1 = 1; break; }\n  }\n  if(flag1 == 0) { flag = 1; break; }\n  i++;\n}\ncout << flag << endl;</code></pre>",
       "answers": {
         "a": "0",
         "b": "1",

@@ -70,7 +70,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "5. What is the time complexity of the following recursive function?\n1 def f(n):\n2     If n == 0 or n == 1: return 1\n3     return f(n-1) + f(n-2)",
+      "question": "5. What is the time complexity of the following recursive function?\n<pre><code>\ndef f(n):\n    if n == 0 or n == 1:\n        return 1\n    return f(n-1) + f(n-2)</code></pre>",
       "answers": {
         "a": "O(log n)",
         "b": "O(n)",
