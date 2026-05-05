@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. What is the time complexity of the Naive String Searching Algorithm? (N = length of the string, M = length of the pattern)",
+      "question": "1. Which of the following best describes the main idea of the Naive String Searching Algorithm?",
       "answers": {
-        "a": "O(N*M)",
-        "b": "O(N+M)",
-        "c": "O(N^M)",
+        "a": "It uses a prefix table to skip unnecessary comparisons.",
+        "b": "It checks for the pattern at every possible position in the text.",
+        "c": "It sorts the pattern and the text before searching.",
+        "d": "It uses hashing to find the pattern."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This describes the KMP algorithm, not the naive approach.",
+        "b": "Correct. The naive algorithm checks for the pattern at every possible position in the text.",
+        "c": "Incorrect. Sorting is not involved in naive string searching.",
+        "d": "Incorrect. Hashing is used in algorithms like Rabin-Karp, not naive search."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is the time complexity of the Naive String Searching Algorithm? (N = length of the string, M = length of the pattern)",
+      "answers": {
+        "a": "O(N+M)",
+        "b": "O(N^M)",
+        "c": "O(N*M)",
         "d": "None of the above."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "explanations": {
-        "a": "Correct. The naive string search checks each possible starting index in the string (O(N)), and for each, compares up to M characters (O(M)), resulting in O(N*M) time complexity.",
-        "b": "Incorrect. O(N+M) is the complexity of more advanced algorithms like KMP.",
-        "c": "Incorrect. O(N^M) is not the correct complexity for this algorithm.",
-        "d": "Incorrect. Option a is correct."
+        "a": "Incorrect. O(N+M) is the complexity of more advanced algorithms like KMP.",
+        "b": "Incorrect. O(N^M) is not the correct complexity for this algorithm.",
+        "c": "Correct. The naive string search checks each possible starting index in the string (O(N)), and for each, compares up to M characters (O(M)), resulting in O(N*M) time complexity.",
+        "d": "Incorrect. Option c is correct."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "2. What will be the output of the following code (C++ snippet)? <br><pre><code>string s = 'kmpalgo';\nint n = s.size();\nstring s2 = 'algo';\nint m = s2.size();\nint i = 0;\nint flag = 0;\nwhile(i < n) {\n  int j = i;\n  int k = 0;\n  int flag1 = 0;\n  while(j < n && k < m) {\n    if(s[j] == s2[k]) { j++; k++; }\n    else { flag1 = 1; break; }\n  }\n  if(flag1 == 0) { flag = 1; break; }\n  i++;\n}\ncout << flag << endl;</code></pre>",
+      "question": "3. What will be the output of the following code (C++ snippet)? <br><pre><code>string s = 'kmpalgo';\nint n = s.size();\nstring s2 = 'algo';\nint m = s2.size();\nint i = 0;\nint flag = 0;\nwhile(i < n) {\n  int j = i;\n  int k = 0;\n  int flag1 = 0;\n  while(j < n && k < m) {\n    if(s[j] == s2[k]) { j++; k++; }\n    else { flag1 = 1; break; }\n  }\n  if(flag1 == 0) { flag = 1; break; }\n  i++;\n}\ncout << flag << endl;</code></pre>",
       "answers": {
-        "a": "1",
-        "b": "0",
-        "c": "Runtime error",
-        "d": "Compilation error"
+        "a": "0",
+        "b": "1",
+        "c": "Compilation error",
+        "d": "Runtime error"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "explanations": {
-        "a": "Correct. The code implements the naive search algorithm and returns 1 if the pattern 'algo' is found in 'kmpalgo', which it is.",
-        "b": "Incorrect. The pattern is present, so the output is not 0.",
-        "c": "Incorrect. The code does not cause a runtime error.",
-        "d": "Incorrect. The code does not have a compilation error."
+        "a": "Incorrect. The pattern is present, so the output is not 0.",
+        "b": "Correct. The code implements the naive search algorithm and returns 1 if the pattern 'algo' is found in 'kmpalgo', which it is.",
+        "c": "Incorrect. The code does not have a compilation error.",
+        "d": "Incorrect. The code does not cause a runtime error."
       },
       "difficulty": "advanced"
+    },
+    {
+      "question": "4. Which of the following is a limitation of the Naive String Searching Algorithm compared to KMP?",
+      "answers": {
+        "a": "It cannot find patterns at all.",
+        "b": "It may perform redundant comparisons, leading to higher time complexity.",
+        "c": "It requires preprocessing of the pattern.",
+        "d": "It only works for numeric patterns."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The naive algorithm can find patterns, but less efficiently.",
+        "b": "Correct. The naive algorithm may perform redundant comparisons, unlike KMP which avoids them.",
+        "c": "Incorrect. Preprocessing is a feature of KMP, not a limitation of naive search.",
+        "d": "Incorrect. The naive algorithm works for any pattern, not just numeric."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. For which scenario is the naive string searching algorithm most likely to be as efficient as KMP?",
+      "answers": {
+        "a": "When the pattern is very long compared to the text.",
+        "b": "When the pattern and text have no repeated characters.",
+        "c": "When the pattern occurs many times in the text.",
+        "d": "When the text is much shorter than the pattern."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A long pattern compared to the text is not typical for efficiency.",
+        "b": "Correct. If there are no repeated characters, the naive and KMP algorithms perform similarly.",
+        "c": "Incorrect. Multiple occurrences do not make naive as efficient as KMP.",
+        "d": "Incorrect. If the text is shorter than the pattern, no matches are possible."
+      },
+      "difficulty": "beginner"
     }
   ]
 }

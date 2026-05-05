@@ -4,34 +4,34 @@
     {
       "question": "1. What is the time complexity of the KMP algorithm? (M = length of pattern, N = length of string in which the pattern is searched)",
       "answers": {
-        "a": "O(M×N)",
-        "b": "O(M^N)",
-        "c": "O(M+N)",
+        "a": "O(M^N)",
+        "b": "O(M+N)",
+        "c": "O(M×N)",
         "d": "None of these"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. O(M×N) is the time complexity of the naive string search algorithm, not KMP.",
-        "b": "Incorrect. O(M^N) is not the correct complexity for KMP.",
-        "c": "Correct. KMP preprocesses the pattern in O(M) time and searches the string in O(N) time, for a total of O(M+N).",
-        "d": "Incorrect. Option c is correct."
+        "a": "Incorrect. O(M^N) is not the correct complexity for KMP.",
+        "b": "Correct. KMP preprocesses the pattern in O(M) time and searches the string in O(N) time, for a total of O(M+N).",
+        "c": "Incorrect. O(M×N) is the time complexity of the naive string search algorithm, not KMP.",
+        "d": "Incorrect. Option b is correct."
       },
       "difficulty": "advanced"
     },
     {
       "question": "2. Given the pattern to be found, which of the following is the correct LPS array? Pattern = AABAAC",
       "answers": {
-        "a": "1 0 1 2 0 0",
-        "b": "0 0 1 0 1 2",
-        "c": "0 1 0 1 2 0",
+        "a": "0 0 1 0 1 2",
+        "b": "0 1 0 1 2 0",
+        "c": "1 0 1 2 0 0",
         "d": "0 1 0 1 2 0"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "explanations": {
         "a": "Incorrect. This is not the correct LPS array for the given pattern.",
-        "b": "Incorrect. This is not the correct LPS array for the given pattern.",
-        "c": "Correct. The LPS (Longest Prefix-Suffix) array for 'AABAAC' is [0, 1, 0, 1, 2, 0].",
-        "d": "Incorrect. This is a duplicate of option c, but only one correct answer is needed."
+        "b": "Correct. The LPS (Longest Prefix-Suffix) array for 'AABAAC' is [0, 1, 0, 1, 2, 0].",
+        "c": "Incorrect. This is not the correct LPS array for the given pattern.",
+        "d": "Incorrect. This is a duplicate of option b, but only one correct answer is needed."
       },
       "difficulty": "intermediate"
     },
@@ -40,17 +40,68 @@
       "answers": {
         "a": "8",
         "b": "10",
-        "c": "1",
-        "d": "3"
+        "c": "3",
+        "d": "1"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "explanations": {
         "a": "Incorrect. 8 is the starting index of the second match, not the first.",
         "b": "Incorrect. 10 is the ending index of the second match, not the starting index.",
-        "c": "Correct. The first occurrence of 'SAT' in 'TSATLEADSAT' starts at index 1 (assuming 1-based indexing).",
-        "d": "Incorrect. 3 is not the correct starting index for the first match."
+        "c": "Incorrect. 3 is not the correct starting index for the first match.",
+        "d": "Correct. The first occurrence of 'SAT' in 'TSATLEADSAT' starts at index 1 (assuming 1-based indexing)."
       },
       "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Which of the following is a key advantage of KMP over the naive string searching algorithm?",
+      "answers": {
+        "a": "KMP can search for multiple patterns at once.",
+        "b": "KMP avoids redundant comparisons by using the LPS array.",
+        "c": "KMP sorts the pattern before searching.",
+        "d": "KMP works only for numeric strings."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. KMP searches for one pattern at a time.",
+        "b": "Correct. KMP uses the LPS array to avoid redundant comparisons, making it more efficient than naive search.",
+        "c": "Incorrect. Sorting is not part of KMP.",
+        "d": "Incorrect. KMP works for any string, not just numeric."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which of the following best describes the role of the LPS array in the KMP algorithm?",
+      "answers": {
+        "a": "It helps to skip unnecessary comparisons after a mismatch.",
+        "b": "It stores the number of matches found so far.",
+        "c": "It sorts the pattern alphabetically.",
+        "d": "It counts the number of mismatches."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The LPS array allows KMP to skip unnecessary comparisons after a mismatch.",
+        "b": "Incorrect. The LPS array does not count matches.",
+        "c": "Incorrect. Sorting is not related to the LPS array.",
+        "d": "Incorrect. The LPS array does not count mismatches."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which of the following is NOT a valid property of the KMP algorithm?",
+      "answers": {
+        "a": "It works in O(M+N) time complexity.",
+        "b": "It uses a prefix function for preprocessing.",
+        "c": "It can handle overlapping patterns efficiently.",
+        "d": "It requires the pattern to have all unique characters."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. KMP does work in O(M+N) time.",
+        "b": "Incorrect. KMP uses a prefix function (LPS array) for preprocessing.",
+        "c": "Incorrect. KMP can handle overlapping patterns efficiently.",
+        "d": "Correct. KMP does not require the pattern to have all unique characters."
+      },
+      "difficulty": "advanced"
     }
   ]
 }

@@ -34,6 +34,74 @@
         "d": "Incorrect. Only option c is correct."
       },
       "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What is the first step in the KMP algorithm before searching for the pattern in the text?",
+      "answers": {
+        "a": "Sort the pattern alphabetically.",
+        "b": "Compute the LPS (Longest Prefix Suffix) array for the pattern.",
+        "c": "Reverse the text.",
+        "d": "Count the number of pattern occurrences in the text."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Sorting is not part of KMP.",
+        "b": "Correct. The first step is to compute the LPS array for the pattern.",
+        "c": "Incorrect. Reversing the text is not required.",
+        "d": "Incorrect. Counting occurrences is not the first step."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is NOT a possible value in the LPS array for the pattern 'ABABAC'?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. 0 is a valid value in the LPS array.",
+        "b": "Incorrect. 1 is a valid value in the LPS array.",
+        "c": "Incorrect. 2 is a valid value in the LPS array.",
+        "d": "Correct. 4 is not a possible value in the LPS array for 'ABABAC'."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following best describes the worst-case time complexity of the KMP algorithm? (M = length of pattern, N = length of text)",
+      "answers": {
+        "a": "O(M*N)",
+        "b": "O(M+N)",
+        "c": "O(M^N)",
+        "d": "O(N^2)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. O(M*N) is the naive algorithm's complexity.",
+        "b": "Correct. KMP runs in O(M+N) time in the worst case.",
+        "c": "Incorrect. O(M^N) is not the correct complexity.",
+        "d": "Incorrect. O(N^2) is not the correct complexity."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. Which of the following is a limitation of the KMP algorithm?",
+      "answers": {
+        "a": "It cannot handle patterns with repeated characters.",
+        "b": "It requires additional space for the LPS array.",
+        "c": "It only works for numeric strings.",
+        "d": "It cannot find overlapping patterns."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. KMP can handle repeated characters in the pattern.",
+        "b": "Correct. KMP requires extra space for the LPS array.",
+        "c": "Incorrect. KMP works for any string, not just numeric.",
+        "d": "Incorrect. KMP can find overlapping patterns."
+      },
+      "difficulty": "advanced"
     }
   ]
 }
