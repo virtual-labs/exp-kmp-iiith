@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-17 Wed 07:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Demonstration artefact UI for all string searching demonstrations</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Demonstration artefact UI for all string searching demonstrations</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0c5bcc6">1. Introduction</a></li>
+<li><a href="#org4ae4c79">2. Functions and their descriptions</a>
+<ul>
+<li><a href="#org9676351">2.1. Setup Cards</a></li>
+<li><a href="#orgee00ea7">2.2. Shift Space</a></li>
+<li><a href="#orgf46dad6">2.3. Correct Match Highlight</a></li>
+<li><a href="#org2fa586b">2.4. Incorrect Match Highlight</a></li>
+<li><a href="#org2c8cfbd">2.5. Reset Colour</a></li>
+<li><a href="#orgb52e8dc">2.6. Track String Index</a></li>
+<li><a href="#org8d0bea3">2.7. Display Comment</a></li>
+</ul>
+</li>
+<li><a href="#orge939264">3. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0c5bcc6" class="outline-2">
+<h2 id="org0c5bcc6"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document builds the functionality with JavaScript to
+add behaviour/interactivity to all the interactive demo
+artefacts.  This creates the UI necessary for
+demonstration of any string matching algorithm.  i.e has
+functionality to display the strings , move the pattern ,
+show correct matches, incorrect matches , move the pointer
+et cetera .
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ae4c79" class="outline-2">
+<h2 id="org4ae4c79"><span class="section-number-2">2</span> Functions and their descriptions</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org9676351" class="outline-3">
+<h3 id="org9676351"><span class="section-number-3">2.1</span> Setup Cards</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Is called whenever <code>setup</code> button is clicked. Resets both
+the string cards using the text in text input fields and
+resets any matching to start from the beginning.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="org1bdcf47"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">setupCards</span> = <span style="font-weight: bold;">function</span> setupCards(){
+  $(<span style="font-style: italic;">".card"</span>).remove() 
+  $(<span style="font-style: italic;">"#patternString"</span>).css({left:<span style="font-style: italic;">"0px"</span>}) <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Shifts pattern to origin</span>
+  <span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">inString</span>=document.getElementById(<span style="font-style: italic;">"stringInput"</span>).value; <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Text value</span>
+
+  <span style="font-weight: bold;">for</span>(i=0;i&lt;inString.length;i++){
+    document.getElementById(<span style="font-style: italic;">"searchStringRow"</span>).innerHTML += <span style="font-style: italic;">"&lt;td class=\"card\"&gt;"</span> + inString[i] +   <span style="font-style: italic;">"&lt;/td&gt;"</span> ;
+  } <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Displays the cards</span>
+
+  <span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">inPattern</span>=document.getElementById(<span style="font-style: italic;">"patternInput"</span>).value; <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Text Value</span>
+  <span style="font-weight: bold;">for</span>(i=0;i&lt;inPattern.length;i++){
+    document.getElementById(<span style="font-style: italic;">"patternStringRow"</span>).innerHTML += <span style="font-style: italic;">"&lt;td class=\"card\"&gt;"</span> + inPattern[i] +   <span style="font-style: italic;">"&lt;/td&gt;"</span> ;  
+  } <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Displays cards</span>
+
+  document.getElementById(<span style="font-style: italic;">"patternString"</span>).style.top = toString(document.getElementById(<span style="font-style: italic;">"searchString"</span>).style.top + 10) + <span style="font-style: italic;">"px"</span> <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">Places pattern below the text</span>
+  
+  stringCardObjects = document.querySelectorAll(<span style="font-style: italic;">'#searchStringRow &gt; .card'</span>); <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">makes objects out of cards to use in the core logic program</span>
+  patternCardObjects = document.querySelectorAll(<span style="font-style: italic;">'#patternStringRow &gt; .card'</span>);
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee00ea7" class="outline-3">
+<h3 id="orgee00ea7"><span class="section-number-3">2.2</span> Shift Space</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Used to animate the pattern cards and shift them by shiftAmt
+units to the right.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="org5fe3ec0"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">shiftSpace</span> = <span style="font-weight: bold;">function</span> shiftSpace(<span style="font-weight: bold; font-style: italic;">shiftAmt</span>){
+  $(<span style="font-style: italic;">"#patternString"</span>).animate({left: <span style="font-style: italic;">"+="</span> + (shiftAmt*$(patternCardObjects[0]).width()).toString() + <span style="font-style: italic;">"px"</span>},500);
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf46dad6" class="outline-3">
+<h3 id="orgf46dad6"><span class="section-number-3">2.3</span> Correct Match Highlight</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Used to highlight the card with index <code>matchIndex</code> to green
+colour with fade-in animation in 200ms.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="orgdd64931"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">correctMatchHighlight</span> = <span style="font-weight: bold;">function</span> correctMatchHighlight(<span style="font-weight: bold; font-style: italic;">matchIndex</span>){
+  $(patternCardObjects[matchIndex]).animate({
+    backgroundColor: <span style="font-style: italic;">"#41f471"</span>,
+    color: <span style="font-style: italic;">"black"</span>
+  },200);
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2fa586b" class="outline-3">
+<h3 id="org2fa586b"><span class="section-number-3">2.4</span> Incorrect Match Highlight</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Used to highlight the card with index <code>matchIndex</code> to red
+colour with fade-in animation in 500ms.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="org5d547cc"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">incorrectMatchHighlight</span> = <span style="font-weight: bold;">function</span> incorrectMatchHighlight(<span style="font-weight: bold; font-style: italic;">matchIndex</span>){
+  $(patternCardObjects[matchIndex]).animate({
+    backgroundColor: <span style="font-style: italic;">"#ff6063"</span>,
+    color: <span style="font-style: italic;">"black"</span>
+  },500);
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2c8cfbd" class="outline-3">
+<h3 id="org2c8cfbd"><span class="section-number-3">2.5</span> Reset Colour</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Resets the colour of all the cards to grey with fade-out
+animation in 200ms .
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="org1d194a0"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">resetColour</span> = <span style="font-weight: bold;">function</span> resetColour(){
+  <span style="font-weight: bold;">for</span>(i=0;i&lt;patternCardObjects.length;i++){
+    $(patternCardObjects[i]).animate({backgroundColor: <span style="font-style: italic;">"#f1eded"</span>},200)
+  }
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb52e8dc" class="outline-3">
+<h3 id="orgb52e8dc"><span class="section-number-3">2.6</span> Track String Index</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+This function moves the pointer which tracks the current
+string index to help user follow the experiment.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="orgd054d06"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">trackStringIndex</span> = <span style="font-weight: bold;">function</span> trackStringIndex(<span style="font-weight: bold; font-style: italic;">strind</span>,<span style="font-weight: bold; font-style: italic;">patind</span>){
+  $(stringCardObjects[strind]).addClass(<span style="font-style: italic;">"currentStringCard"</span>);
+  $(stringCardObjects[strind-1]).removeClass(<span style="font-style: italic;">"currentStringCard"</span>)
+  $(patternCardObjects[patind]).addClass(<span style="font-style: italic;">"currentStringCard"</span>);
+  $(patternCardObjects[patind-1]).removeClass(<span style="font-style: italic;">"currentStringCard"</span>)
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d0bea3" class="outline-3">
+<h3 id="org8d0bea3"><span class="section-number-3">2.7</span> Display Comment</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Displays the <code>string</code> argument in the demo comment box.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="org967d667"><span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">displayComment</span> = <span style="font-weight: bold;">function</span> displayComment(<span style="font-weight: bold; font-style: italic;">string</span>){
+  document.getElementById(<span style="font-style: italic;">"comment"</span>).innerHTML = string ;
+};
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge939264" class="outline-2">
+<h2 id="orge939264"><span class="section-number-2">3</span> Tangle</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-js">&lt;&lt;setupCards&gt;&gt;
+&lt;&lt;shiftSpace&gt;&gt;
+&lt;&lt;correctMatchHighlight&gt;&gt;
+&lt;&lt;incorrectMatchHighlight&gt;&gt;
+&lt;&lt;resetColour&gt;&gt;
+&lt;&lt;displayComment&gt;&gt;
+&lt;&lt;trackStringIndex&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 07/06/2019</p>
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2021-03-17 Wed 07:43</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

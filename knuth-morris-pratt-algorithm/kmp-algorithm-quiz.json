@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which one of the following is true in the KMP String searching algorithm? (strInd = iterator in the main string)",
+      "answers": {
+        "a": "The value of strInd always increases in all iterations.",
+        "b": "The value of strInd remains the same in all the iterations.",
+        "c": "The value of strInd may or may not increase in all the iterations but it never decreases.",
+        "d": "None of the mentioned"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. While strInd often increases, it may remain the same during certain iterations when handling mismatches.",
+        "b": "Incorrect. The iterator must move forward through the text to search for the pattern; it cannot remain the same throughout.",
+        "c": "Correct. The value of the iterator in the main string (strInd) may remain the same when there is a mismatch of characters, while the iterator in the pattern decreases according to the LPS (Longest Prefix-Suffix) array. The key insight is that strInd never moves backward, which is what makes KMP efficient.",
+        "d": "Incorrect. Option c correctly describes the behavior of strInd in the KMP algorithm."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How does KMP improve the brute-force method?",
+      "answers": {
+        "a": "By comparing the characters right to left instead of left to right.",
+        "b": "By searching for text in pattern instead of pattern in string",
+        "c": "By not doing redundant comparisons and using the information gained from previous comparisons",
+        "d": "All of the mentioned"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. KMP still compares characters from left to right. The improvement comes from how it handles mismatches, not the direction of comparison.",
+        "b": "Incorrect. KMP still searches for the pattern in the text, just like the brute-force method. The order of search is not changed.",
+        "c": "Correct. Using the LPS (Longest Prefix-Suffix) array, the KMP algorithm decides which character to compare next based on previous matches, instead of shifting the entire pattern and restarting comparisons from index 0. This eliminates redundant comparisons.",
+        "d": "Incorrect. Only option c is correct; options a and b do not accurately describe KMP's improvements."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What is the first step in the KMP algorithm before searching for the pattern in the text?",
+      "answers": {
+        "a": "Sort the pattern alphabetically.",
+        "b": "Compute the LPS (Longest Prefix Suffix) array for the pattern.",
+        "c": "Reverse the text.",
+        "d": "Count the number of pattern occurrences in the text."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Sorting is not part of KMP.",
+        "b": "Correct. The first step is to compute the LPS array for the pattern.",
+        "c": "Incorrect. Reversing the text is not required.",
+        "d": "Incorrect. Counting occurrences is not the first step."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is NOT a possible value in the LPS array for the pattern 'ABABAC'?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. 0 is a valid value in the LPS array.",
+        "b": "Incorrect. 1 is a valid value in the LPS array.",
+        "c": "Incorrect. 2 is a valid value in the LPS array.",
+        "d": "Correct. 4 is not a possible value in the LPS array for 'ABABAC'."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following best describes the worst-case time complexity of the KMP algorithm? (M = length of pattern, N = length of text)",
+      "answers": {
+        "a": "O(M*N)",
+        "b": "O(M+N)",
+        "c": "O(M^N)",
+        "d": "O(N^2)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. O(M*N) is the naive algorithm's complexity.",
+        "b": "Correct. KMP runs in O(M+N) time in the worst case.",
+        "c": "Incorrect. O(M^N) is not the correct complexity.",
+        "d": "Incorrect. O(N^2) is not the correct complexity."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. Which of the following is a limitation of the KMP algorithm?",
+      "answers": {
+        "a": "It cannot handle patterns with repeated characters.",
+        "b": "It requires additional space for the LPS array.",
+        "c": "It only works for numeric strings.",
+        "d": "It cannot find overlapping patterns."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. KMP can handle repeated characters in the pattern.",
+        "b": "Correct. KMP requires extra space for the LPS array.",
+        "c": "Incorrect. KMP works for any string, not just numeric.",
+        "d": "Incorrect. KMP can find overlapping patterns."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

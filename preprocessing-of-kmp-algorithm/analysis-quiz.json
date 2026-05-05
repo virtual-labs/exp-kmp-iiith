@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the time complexity of the preprocessing function for a pattern of length M?",
+      "answers": {
+        "a": "O(M^2)",
+        "b": "O(M^3)",
+        "c": "O(M)",
+        "d": "O(sqrt(M))"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The preprocessing function does not require quadratic time.",
+        "b": "Incorrect. O(M^3) is much higher than required.",
+        "c": "Correct. The preprocessing function for KMP computes the LPS array in O(M) time by iterating through the pattern once.",
+        "d": "Incorrect. O(sqrt(M)) is not the correct complexity."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What is the longest-prefix-suffix length for: 'ANIDAPOPOANIDA'?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "5",
+        "d": "6"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 2 is not the correct length of the longest prefix-suffix.",
+        "b": "Incorrect. 3 is not the correct length of the longest prefix-suffix.",
+        "c": "Correct. The longest prefix-suffix for 'ANIDAPOPOANIDA' is 5, as the prefix and suffix 'ANIDA' match.",
+        "d": "Incorrect. 6 is not the correct length of the longest prefix-suffix."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Which of the following is the main purpose of the LPS array in KMP preprocessing?",
+      "answers": {
+        "a": "To store the number of matches found so far.",
+        "b": "To help skip unnecessary comparisons during the search phase.",
+        "c": "To sort the pattern alphabetically.",
+        "d": "To count the number of mismatches."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The LPS array does not count matches.",
+        "b": "Correct. The LPS array helps KMP skip unnecessary comparisons during the search phase.",
+        "c": "Incorrect. Sorting is not related to the LPS array.",
+        "d": "Incorrect. The LPS array does not count mismatches."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is NOT a valid step in the KMP preprocessing phase?",
+      "answers": {
+        "a": "Initialize the LPS array to all zeros.",
+        "b": "Compare the pattern with itself to find prefixes and suffixes.",
+        "c": "Sort the pattern alphabetically.",
+        "d": "Update the LPS value when a prefix matches a suffix."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Initializing the LPS array is a valid step.",
+        "b": "Incorrect. Comparing the pattern with itself is part of LPS computation.",
+        "c": "Correct. Sorting is not part of KMP preprocessing.",
+        "d": "Incorrect. Updating LPS values is a valid step."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the space complexity of the LPS array for a pattern of length M?",
+      "answers": {
+        "a": "O(M)",
+        "b": "O(1)",
+        "c": "O(M^2)",
+        "d": "O(log M)"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The LPS array requires O(M) space, where M is the length of the pattern.",
+        "b": "Incorrect. The space is not constant.",
+        "c": "Incorrect. The space is not quadratic.",
+        "d": "Incorrect. The space is not logarithmic."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
