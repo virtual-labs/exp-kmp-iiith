@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. What is the time complexity of the KMP algorithm? (M = length of pattern, N = length of string in which the pattern is searched)",
+      "question": "1. What is the time complexity of the KMP Algorithm? (M = length of pattern, N = length of string in which pattern is searched)",
       "answers": {
         "a": "O(M^N)",
         "b": "O(M+N)",
@@ -19,7 +19,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "2. Given the pattern to be found, which of the following is the correct LPS array? Pattern = AABAAC",
+      "question": "2. Given the pattern to be found, which of the following is the correct LPS array?<br>Pattern = AABAAC",
       "answers": {
         "a": "0 0 1 0 1 2",
         "b": "0 1 0 1 2 0",
@@ -36,7 +36,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "3. Given the input string and pattern, find the first index of the input string that matches the pattern using the KMP algorithm. Input String = 'TSATLEADSAT', Pattern = 'SAT'",
+      "question": "3. Given Input String and Pattern, find the first index of the input string that matches the pattern using the KMP algorithm.<br>Input String = \"TSATLEADSAT\"<br>Pattern = \"SAT\"",
       "answers": {
         "a": "8",
         "b": "10",

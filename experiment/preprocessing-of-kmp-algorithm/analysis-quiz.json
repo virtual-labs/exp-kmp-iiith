@@ -19,7 +19,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "2. What is the longest prefix-suffix for: 'ANIDAPOPOANIDA'?",
+      "question": "2. What is the longest-prefix-suffix length for: 'ANIDAPOPOANIDA'?",
       "answers": {
         "a": "2",
         "b": "3",

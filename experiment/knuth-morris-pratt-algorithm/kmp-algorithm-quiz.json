@@ -2,19 +2,19 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following is true in the KMP string searching algorithm? (strInd = iterator in the main string)",
+      "question": "1. Which one of the following is true in the KMP String searching algorithm? (strInd = iterator in the main string)",
       "answers": {
         "a": "The value of strInd always increases in all iterations.",
-        "b": "The value of strInd remains the same in all iterations.",
-        "c": "The value of strInd may or may not increase in all iterations, but it never decreases.",
-        "d": "None of the above."
+        "b": "The value of strInd remains the same in all the iterations.",
+        "c": "The value of strInd may or may not increase in all the iterations but it never decreases.",
+        "d": "None of the mentioned"
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. strInd can remain the same during a mismatch.",
-        "b": "Incorrect. strInd does not always remain the same; it advances when characters match.",
-        "c": "Correct. strInd may stay the same during a mismatch, but it never decreases in the KMP algorithm.",
-        "d": "Incorrect. Option c is correct."
+        "a": "Incorrect. While strInd often increases, it may remain the same during certain iterations when handling mismatches.",
+        "b": "Incorrect. The iterator must move forward through the text to search for the pattern; it cannot remain the same throughout.",
+        "c": "Correct. The value of the iterator in the main string (strInd) may remain the same when there is a mismatch of characters, while the iterator in the pattern decreases according to the LPS (Longest Prefix-Suffix) array. The key insight is that strInd never moves backward, which is what makes KMP efficient.",
+        "d": "Incorrect. Option c correctly describes the behavior of strInd in the KMP algorithm."
       },
       "difficulty": "beginner"
     },
@@ -22,16 +22,16 @@
       "question": "2. How does KMP improve the brute-force method?",
       "answers": {
         "a": "By comparing the characters right to left instead of left to right.",
-        "b": "By searching for text in the pattern instead of the pattern in the string.",
-        "c": "By avoiding redundant comparisons and using information from previous matches.",
-        "d": "All of the above."
+        "b": "By searching for text in pattern instead of pattern in string",
+        "c": "By not doing redundant comparisons and using the information gained from previous comparisons",
+        "d": "All of the mentioned"
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. KMP compares left to right, not right to left.",
-        "b": "Incorrect. KMP searches for the pattern in the string, not the other way around.",
-        "c": "Correct. KMP uses the LPS array to avoid redundant comparisons, making it more efficient than brute-force.",
-        "d": "Incorrect. Only option c is correct."
+        "a": "Incorrect. KMP still compares characters from left to right. The improvement comes from how it handles mismatches, not the direction of comparison.",
+        "b": "Incorrect. KMP still searches for the pattern in the text, just like the brute-force method. The order of search is not changed.",
+        "c": "Correct. Using the LPS (Longest Prefix-Suffix) array, the KMP algorithm decides which character to compare next based on previous matches, instead of shifting the entire pattern and restarting comparisons from index 0. This eliminates redundant comparisons.",
+        "d": "Incorrect. Only option c is correct; options a and b do not accurately describe KMP's improvements."
       },
       "difficulty": "intermediate"
     },

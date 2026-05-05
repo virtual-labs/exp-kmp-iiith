@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following best describes a substring?",
+      "question": "1. Which of the following is the best description of a substring?",
       "answers": {
         "a": "A contiguous sequence of characters within a string.",
         "b": "A sequence of characters that appear in the same order, but not necessarily contiguous.",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2. Which of the following is NOT a prefix of the string 'algorithm'?",
+      "question": "2. Which of the following is not a prefix of the string \"algorithm\"?",
       "answers": {
         "a": "algo",
         "b": "algorithm",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3. Which of the following is a suffix of the string 'vlabs'?",
+      "question": "3. Which of the following is a suffix of the string \"vlabs\"?",
       "answers": {
         "a": "vlab",
         "b": "labs",
